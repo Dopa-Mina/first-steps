@@ -1,2 +1,2 @@
 # first-steps
-lerning go
+learning go
