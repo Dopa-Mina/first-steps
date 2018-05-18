@@ -6,20 +6,19 @@ import (
 
 func main() {
 
-	//create an array,
+	type person struct {
+		vorname    string
+		nachname   string
+		strasse    string
+		hausnummer int
+		plz        int
+		wohnort    string
+		id         int
+	}
 
-	arr := [3]int{1, 2, 3}
-	fmt.Println(len(arr))
-	fmt.Println(arr[1])
-	fmt.Println(arr)
-
-	//create a slice
-
-	slice := []string{}
-	slice = append(slice, "foo", "bar", "foobar")
-	fmt.Println(slice)
-
-	secondslice := []string{"what", "ever"}
-	slice = append(slice, secondslice...)
-	fmt.Println(slice)
+	Teilnehmerliste := []person{}
+	Teilnehmerliste = append(Teilnehmerliste, person{"Max", "Mustermann", "Musterstrasse", 12, 12345, "Musterstadt", 1})
+	Teilnehmerliste = append(Teilnehmerliste, person{"Michaela", "Mustermann", "Musterstrasse", 1, 12345, "Musterstadt", 2})
+	Teilnehmerliste = append(Teilnehmerliste, person{"Paul", "Paulsen", "Paulstrasse", 15, 12345, "Musterstadt", 3})
+	fmt.Println(Teilnehmerliste)
 }
