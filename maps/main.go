@@ -5,18 +5,23 @@ import (
 )
 
 type person struct {
-	name string
-	age  int
-	city string
+	name     string
+	nachname string
 }
 
 func main() {
 
-	list := make(map[int]person)
-	list[1] = person{name: "Max", age: 30, city: "Town"}
-	list[2] = person{name: "Moritz", age: 29, city: "Town"}
-	list[3] = person{name: "Michelle", age: 30, city: "Town"}
+	p1 := person{"Max", "Mustermann"}
+	p2 := person{"Moritz", "Mustermann"}
+	p3 := person{"Michelle", "Mustermann"}
+	p4 := person{"Manuel", "Mustermann"}
 
-	fmt.Println(list[3])
+	isAdmin := make(map[person]bool)
+	isAdmin[p1] = true
+	isAdmin[p2] = false
+	isAdmin[p3] = false
+	isAdmin[p4] = false
+
+	fmt.Println(p1, isAdmin[p1])
 
 }
