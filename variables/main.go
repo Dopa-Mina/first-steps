@@ -7,9 +7,9 @@ import (
 func main() {
 
 	var name = "Yasemina"
-	var alter = 29
+	var age = 99
 
-	fmt.Printf("Mein Name ist %s ", name)
-	fmt.Printf("und ich bin %v Jahre alt", alter)
+	fmt.Printf("My name is %s ", name)
+	fmt.Printf("and i am %v years old \n", age)
 
 }
