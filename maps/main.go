@@ -4,14 +4,19 @@ import (
 	"fmt"
 )
 
+type person struct {
+	name string
+	age  int
+	city string
+}
+
 func main() {
 
-	zahlen := make(map[int]string)
-	zahlen[1] = "eins"
-	zahlen[2] = "zwei"
-	zahlen[3] = "drei"
-	zahlen[4] = "vier"
+	list := make(map[int]person)
+	list[1] = person{name: "Max", age: 30, city: "Town"}
+	list[2] = person{name: "Moritz", age: 29, city: "Town"}
+	list[3] = person{name: "Michelle", age: 30, city: "Town"}
 
-	fmt.Println(zahlen)
+	fmt.Println(list[3])
 
 }
