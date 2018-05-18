@@ -21,4 +21,9 @@ func main() {
 	Teilnehmerliste = append(Teilnehmerliste, person{"Michaela", "Mustermann", "Musterstrasse", 1, 12345, "Musterstadt", 2})
 	Teilnehmerliste = append(Teilnehmerliste, person{"Paul", "Paulsen", "Paulstrasse", 15, 12345, "Musterstadt", 3})
 	fmt.Println(Teilnehmerliste)
+
+	// range over each element in Teilnehmerliste for k = key and v = value
+	for k, v := range Teilnehmerliste {
+		fmt.Println(k, v)
+	}
 }
