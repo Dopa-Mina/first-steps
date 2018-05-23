@@ -7,24 +7,20 @@ import (
 func main() {
 
 	for i := 1; i <= 100; i++ {
-		PrintNr := true
 
-		if i%3 == 0 {
-			fmt.Println("Fizz")
-			PrintNr = false
-		}
-		if i%5 == 0 {
-			fmt.Println("Buzz")
-			PrintNr = false
-		}
-		if i%3 == 0 && i%5 == 0 {
+		switch {
+		case i%3 == 0 && i%5 == 0:
 			fmt.Println("FizzBuzz")
-			PrintNr = false
-		}
 
-		if PrintNr {
+		case i%3 == 0:
+			fmt.Println("Fizz")
+
+		case i%5 == 0:
+			fmt.Println("Buzz")
+		default:
 			fmt.Println(i)
 		}
+
 	}
 
 }
